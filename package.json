@@ -4,15 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:start": "cd apps/server && pnpm start",
+    "server:build": "cd apps/server && pnpm build",
+    "web:dev": "cd apps/web && pnpm dev",
+    "web:build": "cd apps/web && pnpm build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "prisma": "^5.7.0"
-  },
-  "dependencies": {
-    "@prisma/client": "^5.7.0"
-  }
+  "license": "ISC"
 }
