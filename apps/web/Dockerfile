@@ -3,6 +3,7 @@ FROM node:18-slim
 WORKDIR /usr/src/app
 
 COPY ./build ./build
+COPY ./public ./public
 COPY ./package.json ./package.json
 COPY ./pnpm-lock.yaml ./pnpm-lock.yaml
 

@@ -7,6 +7,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - '4000:4000'
+    expose:
+      - 4000
 
   web:
     image: castel-account-book-web
@@ -15,3 +17,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
+    expose:
+      - 3000
