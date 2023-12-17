@@ -8,8 +8,8 @@ COPY ./pnpm-lock.yaml ./pnpm-lock.yaml
 
 RUN npm i -g pnpm
 
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod
 
 EXPOSE 3000
 
-ENTRYPOINT ["node", "build/index.js"]
+ENTRYPOINT ["npx", "remix-serve", "build/index.js"]

@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server:start": "cd apps/server && pnpm start",
-    "server:build": "cd apps/server && pnpm build",
-    "web:dev": "cd apps/web && pnpm dev",
-    "web:build": "cd apps/web && pnpm build"
+    "dev": "concurrently \"pnpm --filter=castel-server start\" \"pnpm --filter=castel-web dev\"",
+    "build": "concurrently \"pnpm --filter=castel-server build\" \"pnpm --filter=castel-web build\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }

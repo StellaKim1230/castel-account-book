@@ -17,10 +17,16 @@ export async function loader() {
 
 export default function Index() {
   const data = useLoaderData<typeof loader>();
-  console.log('data', data);
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
       <h1>Hello world!</h1>
+      <>
+        {data?.length > 0 && (
+          <>
+            {data[0].email}: {data[0].name}
+          </>
+        )}
+      </>
     </div>
   );
 }
