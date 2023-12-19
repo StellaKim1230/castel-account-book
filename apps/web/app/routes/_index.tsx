@@ -10,8 +10,12 @@ export const meta: MetaFunction = () => {
 
 // Server-side rendering in Remix
 export async function loader() {
-  const res = await fetch('http://localhost:4000/users'); // docker server: http://server:4000/users
-  console.log('res', res);
+  const apiUrl =
+    process.env.NODE_ENV === 'development'
+      ? process.env.DEV_API_URL
+      : process.env.API_URL;
+
+  const res = await fetch(`http://${apiUrl}:4000/users`);
   const data = await res?.json();
   return json(data);
 }
