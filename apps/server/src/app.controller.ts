@@ -18,6 +18,12 @@ export class AppController {
     private readonly postService: PostService,
   ) {}
 
+  // @RouteConfig({ output: 'hellow world' })
+  // @Get()
+  // index(@Req() req) {
+  //   return req.routeConfig.output;
+  // }
+
   @Get('post/:id')
   async getPostById(@Param('id') id: string): Promise<PostModel> {
     return this.postService.post({ id: Number(id) });
