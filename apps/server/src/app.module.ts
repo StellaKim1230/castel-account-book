@@ -5,9 +5,11 @@ import { PostService } from './post.service';
 import { UserService } from './user.service';
 // import { HttpAdapterHost } from '@nestjs/core';
 // import { FastifyAdapter } from '@nestjs/platform-fastify';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [],
+  imports: [AuthModule, UsersModule],
   controllers: [AppController],
   providers: [PrismaService, PostService, UserService],
 })
