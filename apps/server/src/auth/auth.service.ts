@@ -9,7 +9,7 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  async signIn(username: string, pass: string): Promise<{ accessToken: string } | any> {
+  async signIn(username: string, pass: string): Promise<string | any> {
     const user = await this.usersService.findOne(username);
 
     if (user?.password !== pass) {
