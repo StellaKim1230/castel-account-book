@@ -21,5 +21,6 @@ lib/
 credentials.json
 
 .vercel
+.npmrc
 
-.npmrc.DS_Store
+turbo.json

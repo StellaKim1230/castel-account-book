@@ -6,12 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"pnpm --filter=castel-server start\" \"pnpm --filter=castel-web dev\"",
-    "build": "concurrently \"pnpm --filter=castel-server build\" \"pnpm --filter=castel-web build\""
+    "build": "turbo build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "turbo": "^1.11.2"
   }
 }
