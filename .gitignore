@@ -24,3 +24,4 @@ credentials.json
 .npmrc
 
 turbo.json
+.turbo

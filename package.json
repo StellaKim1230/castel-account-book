@@ -6,13 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"pnpm --filter=castel-server start\" \"pnpm --filter=castel-web dev\"",
-    "build": "turbo build"
+    "build": "turbo build",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "turbo": "^1.11.2"
